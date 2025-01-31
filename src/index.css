@@ -1,0 +1,13 @@
+@import "tailwindcss";
+.leftSideOfAddingCard {
+  opacity: 0;
+}
+.addingItem {
+  transition: all 0.5s;
+}
+#check:checked ~ .addingItem {
+  right: 0;
+}
+#check:checked ~ .addingItem .leftSideOfAddingCard {
+  opacity: 1;
+}
