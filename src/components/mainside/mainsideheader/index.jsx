@@ -15,6 +15,7 @@ const MainsideHeader = ({
   //
   Inputdescription,
   setInpudescription,
+  //editFoodProductid
 }) => {
   return (
     <>
@@ -26,6 +27,7 @@ const MainsideHeader = ({
                 <div className="w-9 h-9 rounded-full flex items-center justify-center bg-[#20d472]">
                   <img src={add} alt="" />
                 </div>
+                {}
                 <p className="text-start text-[12px]">
                   Yangi maxsulot <br /> qo’shish
                 </p>
