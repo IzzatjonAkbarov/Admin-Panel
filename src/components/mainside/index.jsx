@@ -30,9 +30,10 @@ const Mainside = () => {
   // crud method started for admin panel
 
   /// toasts
-  const added = () => toast.info("added successfully");
+  const added = () => toast.success("added successfully");
 
   const deleted = () => toast.error("Deleted successfully");
+  const edited = () => toast.info("edited successfully");
 
   const createFoodProduct = (e) => {
     e.preventDefault();
@@ -74,7 +75,7 @@ const Mainside = () => {
         category: editcategory,
         description: editDescription,
       })
-      .then((data) => useAxios(), deleted());
+      .then((data) => useAxios(), edited());
     seteditFoodProductid(null);
   };
   const editAdminPanel = (id) => {
@@ -83,7 +84,7 @@ const Mainside = () => {
 
   //crud methods ended for admin panel
   return (
-    <div className="w-[80%] bg-[#f6f6f6]">
+    <div className="w-full h-screen bg-[#f6f6f6]">
       <MainsideHeader
         //added
         added={added}
@@ -101,7 +102,14 @@ const Mainside = () => {
         Inputdescription={Inputdescription}
         setInpudescription={setInpudescription}
       />
-      <div className="w-[95%] m-auto mt-[10px] flex flex-col gap-4">
+      <div className="w-full container1  m-auto  flex flex-col gap-4">
+        <div className="w-full container1  m-auto  flex  gap-4 grid grid-cols-5 text-[14px] font-bold">
+          <p>Name</p>
+          <p>Category</p>
+          <p>Price</p>
+          <p>description</p>
+          <p>Action</p>
+        </div>
         {data.map((value) => {
           return (
             <Mainsidebody

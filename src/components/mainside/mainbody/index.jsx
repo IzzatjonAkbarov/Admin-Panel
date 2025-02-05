@@ -26,7 +26,6 @@ const Mainsidebody = ({
   return (
     <div className="bg-[#fff] p-[10px] w-full rounded-lg grid grid-cols-5 items-center">
       <div className="flex items-center gap-5">
-        <img src={lavashimg} alt="" />
         {editFoodProductid === id ? (
           <input
             onChange={(e) => seteditProductName(e.target.value)}

@@ -4,10 +4,18 @@
 }
 .addingItem {
   transition: all 0.5s;
+  z-index: 50;
 }
 #check:checked ~ .addingItem {
   right: 0;
 }
 #check:checked ~ .addingItem .leftSideOfAddingCard {
   opacity: 1;
+}
+.container1 {
+  width: 95%;
+  margin: auto;
+}
+.active {
+  background-color: #c8c0c0;
 }
